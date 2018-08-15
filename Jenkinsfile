@@ -15,11 +15,6 @@ pipeline {
                 sh 'ant build'
             }
         }
-        stage('Archive') {
-            steps {
-               sh 'archiveArtifacts '**/*.jar'
-            }
-        }
         stage('Deploy') {
             steps {
                 sh 'cp target/*.jar /tmp'
