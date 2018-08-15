@@ -16,13 +16,8 @@ pipeline {
             }
         }
         stage('Archive') {
-            steps{
-               sh 'archiveArtifacts '**/*.jar'
-            }
-        }
-        stage('Publish_reports') {
             steps {
-                echo 'convert to html'
+               sh 'archiveArtifacts '**/*.jar'
             }
         }
         stage('Deploy') {
