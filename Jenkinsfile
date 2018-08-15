@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cp dist/*.war/tmp'
+                sh 'cp target/*.jar/tmp'
             }
         }
     }
